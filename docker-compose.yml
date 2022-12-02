@@ -1,0 +1,23 @@
+x-config:
+  - &NODE_BUILDER "node/builder:0.0.1"
+  - &CONTAINER_NAME "angular-container"
+  - &BUILDER_CONTAINER_NAME "node-builder"
+version: '3.7'
+
+services:
+  # build a node server image to run our code on (docker-compose build node)
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: *NODE_BUILDER
+    container_name: *BUILDER_CONTAINER_NAME
+  # mount current src files and run on node builder (docker-compose up dev)
+  dev:
+    image: *NODE_BUILDER
+    container_name: *CONTAINER_NAME
+    ports:
+      - '4200:4200'
+    volumes:
+      - ./src:/usr/src/app/src
+    command: ng serve --host 0.0.0.0 --poll 200
