@@ -1,4 +1,4 @@
 #!/bin/sh
-cd ../app
+cd /app
 rm -f package-lock.json
 npm install && ng serve
