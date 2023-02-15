@@ -28,7 +28,7 @@ export class SupabaseService {
     this.supabase = createClient(environment.supabaseUrl, environment.supabaseKey)
   }
 
-  get session() {
+  getsession() {
     this.supabase.auth.getSession().then(({ data }) => {
       this._session = data.session
     })
@@ -47,8 +47,12 @@ export class SupabaseService {
     return this.supabase.auth.onAuthStateChange(callback)
   }
 
-  signIn(email: string) {
-    return this.supabase.auth.signInWithOtp({ email })
+  signIn(email: string, password: string) {
+    return this.supabase.auth.signInWithPassword({ email, password })
+  }
+
+  signUp(email: string, password: string){
+    return this.supabase.auth.signUp({ email, password })
   }
 
   signOut() {
