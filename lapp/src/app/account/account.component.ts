@@ -12,7 +12,7 @@ export class AccountComponent implements OnInit {
   loading = false
   profile!: Profile
 
-  @Input()
+  //hallo
   session!: AuthSession
 
   updateProfileForm = this.formBuilder.group({
@@ -24,6 +24,7 @@ export class AccountComponent implements OnInit {
   constructor(private readonly supabase: SupabaseService, private formBuilder: FormBuilder) {}
 
   async ngOnInit(): Promise<void> {
+    this.session = this.supabase.getsession() as AuthSession;
     await this.getProfile()
 
     const { username, website, avatar_url } = this.profile

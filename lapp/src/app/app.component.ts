@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { Router, RouterOutlet } from '@angular/router'
 import { SupabaseService } from './supabase.service'
 
 @Component({
@@ -9,11 +10,13 @@ import { SupabaseService } from './supabase.service'
 export class AppComponent implements OnInit {
   title = 'angular-user-management'
 
-  session = this.supabase.session
+  session = this.supabase.getsession()
 
-  constructor(private readonly supabase: SupabaseService) {}
+  constructor(private readonly supabase: SupabaseService,private router: Router) {}
 
   ngOnInit() {
     this.supabase.authChanges((_, session) => (this.session = session))
+    //if (this.session) this.router.navigate(['account'])
+    //else this.router.navigate(['signin'])
   }
 }

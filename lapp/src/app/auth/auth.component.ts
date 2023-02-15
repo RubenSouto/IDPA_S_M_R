@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { FormBuilder } from '@angular/forms'
+import { Router } from '@angular/router'
 import { SupabaseService } from '../supabase.service'
 
 @Component({
@@ -12,11 +13,13 @@ export class AuthComponent implements OnInit {
 
   signInForm = this.formBuilder.group({
     email: '',
+    password: '',
   })
 
   constructor(
     private readonly supabase: SupabaseService,
-    private readonly formBuilder: FormBuilder
+    private readonly formBuilder: FormBuilder,
+    private readonly router: Router,
   ) {}
 
   ngOnInit(): void {}
@@ -25,9 +28,10 @@ export class AuthComponent implements OnInit {
     try {
       this.loading = true
       const email = this.signInForm.value.email as string
-      const { error } = await this.supabase.signIn(email)
+      const password = this.signInForm.value.password as string
+      const { error } = await this.supabase.signIn(email, password)
+      alert("signed in")
       if (error) throw error
-      alert('Check your email for the login link!')
     } catch (error) {
       if (error instanceof Error) {
         alert(error.message)
@@ -35,6 +39,7 @@ export class AuthComponent implements OnInit {
     } finally {
       this.signInForm.reset()
       this.loading = false
+      //this.router.navigate(['home'])
     }
   }
 }
