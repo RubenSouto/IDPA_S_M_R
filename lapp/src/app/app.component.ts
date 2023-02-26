@@ -15,8 +15,10 @@ export class AppComponent implements OnInit {
   constructor(private readonly supabase: SupabaseService,private router: Router) {}
 
   ngOnInit() {
-    this.supabase.authChanges((_, session) => (this.session = session))
-    //if (this.session) this.router.navigate(['account'])
-    //else this.router.navigate(['signin'])
+    this.supabase.authChanges((ev, session) => {
+      this.session = session
+      if(ev == 'SIGNED_IN') this.router.navigate(['account'])
+      if(ev == 'SIGNED_OUT') this.router.navigate(['signin'])
+    })
   }
 }
