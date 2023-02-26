@@ -15,7 +15,7 @@ import { SubThemaComponent } from './sub-thema/sub-thema.component';
     AuthComponent,
     AccountComponent,
     ThemaComponent,
-    SubThemaComponent
+    SubThemaComponent,
   ],
   imports: [
     BrowserModule,
