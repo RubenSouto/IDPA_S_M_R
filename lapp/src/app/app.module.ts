@@ -8,6 +8,7 @@ import { AuthComponent } from './auth/auth.component';
 import { AccountComponent } from './account/account.component';
 import { ThemaComponent } from './thema/thema.component';
 import { SubThemaComponent } from './sub-thema/sub-thema.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SubThemaComponent } from './sub-thema/sub-thema.component';
     AccountComponent,
     ThemaComponent,
     SubThemaComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
