@@ -6,50 +6,20 @@ import { Thema } from '../shared/interface/thema';
 })
 export class HardCodeThemaDataService {
 
-  themaList?: Thema[];
+  themaList: Thema[];
   constructor() {
     this.themaList = [
       {
         id:1,
-        titel: "Thema 1",
-        subthemas: [
-          {
-            id:1,
-            titel: "subThema1"
-          },
-          {
-            id:2,
-            titel: "subThema2"
-          }
-        ]
+        titel: "Thema 1"
       },
       {
         id:2,
-        titel: "Thema 2",
-        subthemas: [
-          {
-            id:3,
-            titel: "subThema3"
-          },
-          {
-            id:4,
-            titel: "subThem4"
-          }
-        ]
+        titel: "Thema 2"
       },
       {
         id:3,
-        titel: "Thema 3",
-        subthemas: [
-          {
-            id:5,
-            titel: "subThema5"
-          },
-          {
-            id:6,
-            titel: "subThem6"
-          }
-        ]
+        titel: "Thema 3"
       }   
     ]
    }

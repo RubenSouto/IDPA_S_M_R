@@ -1,1 +1,5 @@
-<p>{{thema}}</p>
+<div>
+    <div *ngFor="let subthema of subThemas">
+        <p>{{subthema.id}}, {{subthema.titel}}</p> <button [routerLink]="['/subthema', subthema.id]"></button>
+    </div>
+</div>

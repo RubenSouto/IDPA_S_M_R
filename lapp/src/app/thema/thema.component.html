@@ -1,5 +1,5 @@
 <div>
     <div *ngFor="let thema of themas">
-        <p>{{thema.id}}, {{thema.titel}}</p>
+        <p>{{thema.id}}, {{thema.titel}}</p> <button [routerLink]="['/thema', thema.id]"></button>
     </div>
 </div>
