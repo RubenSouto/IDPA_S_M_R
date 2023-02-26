@@ -30,8 +30,8 @@ export class AuthComponent implements OnInit {
       const email = this.signInForm.value.email as string
       const password = this.signInForm.value.password as string
       const { error } = await this.supabase.signIn(email, password)
-      alert("signed in")
       if (error) throw error
+      else alert("signed in!")
     } catch (error) {
       if (error instanceof Error) {
         alert(error.message)
@@ -39,7 +39,6 @@ export class AuthComponent implements OnInit {
     } finally {
       this.signInForm.reset()
       this.loading = false
-      //this.router.navigate(['home'])
     }
   }
 }

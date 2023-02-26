@@ -29,7 +29,7 @@ export class SignUpComponent implements OnInit {
       const password = this.signUpForm.value.password as string
       const { error } = await this.supabase.signUp(email, password)
       if (error) throw error
-      alert('Check your email for the login link!')
+      else alert("signed up!")
     } catch (error) {
       if (error instanceof Error) {
         alert(error.message)

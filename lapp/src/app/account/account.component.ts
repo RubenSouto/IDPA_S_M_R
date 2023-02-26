@@ -12,7 +12,6 @@ export class AccountComponent implements OnInit {
   loading = false
   profile!: Profile
 
-  //hallo
   session!: AuthSession
 
   updateProfileForm = this.formBuilder.group({
