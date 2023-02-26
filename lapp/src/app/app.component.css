@@ -1,0 +1,14 @@
+header{
+    display: flex;
+    height: 10%;
+    width: 100%;
+    background-color: aquamarine;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+}
+body{
+    height: 90%;
+    width: 100%;
+}
