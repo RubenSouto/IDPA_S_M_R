@@ -1,14 +1,11 @@
 header{
     display: flex;
-    height: 10%;
+    height: 60px;
     width: 100%;
-    background-color: aquamarine;
+    background-color: white;
     align-items: center;
     align-content: center;
     justify-items: center;
     justify-content: center;
-}
-body{
-    height: 90%;
-    width: 100%;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
 }

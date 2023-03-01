@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+html, body, * {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height: calc(100vh - 60px);
+    width: 100%;
+}
+
+.content{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form{
+    height: fit-content;
+    width: 500px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    height: 30px;
+    width: 100%;
+    margin-block: 5px
+}
+
+button{
+    height: 25px;
+    padding-inline: 5px;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+button:hover{
+    transition: 200ms;
+    transform: scale(1.1)
+}

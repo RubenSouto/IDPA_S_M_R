@@ -1,9 +1,7 @@
-<div class="row flex-center flex">
-    <div class="col-6 form-widget" aria-live="polite">
-      <h1 class="header">Supabase + Angular</h1>
-      <p class="description">Sign in via magic link with your email below</p>
+<div class="content">
+    <div class="" aria-live="polite">
+      <h1 class="">Sign Up!</h1>
       <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" class="form-widget">
-        <div>
           <label for="email">Email</label>
           <input
             id="email"
@@ -12,8 +10,6 @@
             type="email"
             placeholder="Your email"
           />
-        </div>
-        <div>
           <label for="password">Password</label>
           <input
             id="password"
@@ -22,8 +18,6 @@
             type="password"
             placeholder="Your password"
           />
-        </div>
-        <div>
           <button
             type="submit"
             class="button block"
@@ -31,7 +25,6 @@
           >
             {{ loading ? 'Loading' : 'SignUp' }}
           </button>
-        </div>
       </form>
       <div>
         <button routerLink="../signin">switch to SignIn</button>

@@ -10,6 +10,7 @@ import { SupabaseService } from '../supabase.service'
 })
 export class AuthComponent implements OnInit {
   loading = false
+  signedIn = false
 
   signInForm = this.formBuilder.group({
     email: '',
@@ -31,7 +32,7 @@ export class AuthComponent implements OnInit {
       const password = this.signInForm.value.password as string
       const { error } = await this.supabase.signIn(email, password)
       if (error) throw error
-      else alert("signed in!")
+      else this.signedIn = true
     } catch (error) {
       if (error instanceof Error) {
         alert(error.message)
@@ -39,6 +40,7 @@ export class AuthComponent implements OnInit {
     } finally {
       this.signInForm.reset()
       this.loading = false
+      if(this.signedIn) this.router.navigate(['home'])
     }
   }
 }
