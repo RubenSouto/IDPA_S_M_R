@@ -35,6 +35,12 @@ export class SupabaseService {
     return this._session
   }
 
+  async isAuthenticated(): Promise<Boolean>{
+    const {data} = await this.supabase.auth.getSession()
+    if(data.session != null) return true;
+    else return false;
+  }
+
   profile(user: User) {
     return this.supabase
       .from('profiles')

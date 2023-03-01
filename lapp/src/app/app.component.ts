@@ -16,13 +16,15 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.supabase.authChanges((ev, session) => {
+      
       this.session = session
       if(ev == 'SIGNED_OUT') this.router.navigate(['signin'])
     })
+
   }
 
   async signOut(){await this.supabase.signOut()}
   public account(){if(this.session != null) this.router.navigate(['account'])}
   public home(){if(this.session != null) this.router.navigate(['home'])}
-
+ 
 }
