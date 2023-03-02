@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import { Router, RouterOutlet } from '@angular/router'
+import { Router } from '@angular/router'
 import { SupabaseService } from './supabase.service'
 
 @Component({
@@ -16,9 +16,15 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.supabase.authChanges((ev, session) => {
+      
       this.session = session
-      if(ev == 'SIGNED_IN') this.router.navigate(['account'])
       if(ev == 'SIGNED_OUT') this.router.navigate(['signin'])
     })
+
   }
+
+  async signOut(){await this.supabase.signOut()}
+  public account(){if(this.session != null) this.router.navigate(['account'])}
+  public home(){if(this.session != null) this.router.navigate(['home'])}
+ 
 }

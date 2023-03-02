@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router'
 import { SupabaseService } from '../supabase.service';
 
 @Component({
@@ -17,7 +18,8 @@ export class SignUpComponent implements OnInit {
 
   constructor(
     private readonly supabase: SupabaseService,
-    private readonly formBuilder: FormBuilder
+    private readonly formBuilder: FormBuilder,
+    private readonly router: Router
   ) {}
 
   ngOnInit(): void {}
@@ -37,6 +39,7 @@ export class SignUpComponent implements OnInit {
     } finally {
       this.signUpForm.reset()
       this.loading = false
+      this.router.navigate(['signin'])
     }
   }
 }
