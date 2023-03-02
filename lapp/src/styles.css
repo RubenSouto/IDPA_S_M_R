@@ -45,4 +45,16 @@ button{
 button:hover{
     transition: 200ms;
     transform: scale(1.1)
+
+.main {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.dataRow:hover{
+    cursor: pointer;
+    background-color: brown;
 }

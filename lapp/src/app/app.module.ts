@@ -9,6 +9,10 @@ import { AccountComponent } from './account/account.component';
 import { ThemaComponent } from './thema/thema.component';
 import { SubThemaComponent } from './sub-thema/sub-thema.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { SubThemaHomeComponent } from './sub-thema-home/sub-thema-home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule  } from "@angular/material/table";
+import { SubInhaltComponent } from './sub-inhalt/sub-inhalt.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +21,16 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     AccountComponent,
     ThemaComponent,
     SubThemaComponent,
-    SignUpComponent
+    SignUpComponent,
+    SubThemaHomeComponent,
+    SubInhaltComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
