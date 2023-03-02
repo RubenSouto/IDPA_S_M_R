@@ -12,10 +12,10 @@ const routes: Routes = [
  // { path: "", component: ThemaComponent},
   { path: "home", component: ThemaComponent, canActivate: [AuthGuardService]},
   { path: "thema/:id", component: SubThemaComponent, canActivate: [AuthGuardService]},
-  { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'signin', component: AuthComponent},
   { path: 'signup', component: SignUpComponent},
-  { path: 'account', component: AccountComponent, canActivate: [AuthGuardService]}
+  { path: 'account', component: AccountComponent, canActivate: [AuthGuardService]},
+  { path: '', redirectTo: '/home', pathMatch: 'prefix'},
 ];
 
 @NgModule({
