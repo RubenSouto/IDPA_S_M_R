@@ -10,13 +10,15 @@ export interface SubThema{
 }
 
 export interface Theorie{
-    parentId: number,
+    parentId: number
+    id: number
     titel: string
     inhalt: string
 }
 
 export interface Aufgabe{
     parentId: number,
+    id: number
     titel: string
     inhalt: string
 }

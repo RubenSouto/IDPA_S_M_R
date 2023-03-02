@@ -11,7 +11,8 @@ import { SubThema } from '../shared/interface/thema';
 export class SubThemaComponent {
 
   public thema: number = 0;
-  public subThemas?: SubThema[];
+  public subThemas: SubThema[] = [];
+  displayedColumns: string[] = ['id', 'titel']
 
   public constructor(private route: ActivatedRoute, private ds: SubThemaDataService){}
 

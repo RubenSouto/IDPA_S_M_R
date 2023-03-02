@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
 import {HardCodeThemaDataService} from '../shared/hard-code-thema-data.service'
 import {Thema} from '../shared/interface/thema';
 
@@ -9,11 +10,12 @@ import {Thema} from '../shared/interface/thema';
 })
 export class ThemaComponent {
 
-  public themas?: Thema[]
+  themaArr: Thema[] = []
+  displayedColumns: string[] = ['id', 'titel']
 
   constructor(private data: HardCodeThemaDataService){ }
 
   ngOnInit(){
-    this.themas = this.data.themaList;
+    this.themaArr = this.data.themaList
   }
 }

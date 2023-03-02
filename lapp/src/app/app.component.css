@@ -1,6 +1,6 @@
 header{
     display: flex;
-    height: 10%;
+    height: 10vh;
     width: 100%;
     background-color: aquamarine;
     align-items: center;
@@ -9,6 +9,6 @@ header{
     justify-content: center;
 }
 body{
-    height: 90%;
+    height: 90vh;
     width: 100%;
 }
