@@ -12,22 +12,29 @@ import { TheorieDataService } from '../shared/theorie-data.service'
 export class SubThemaHomeComponent {
 
   public subThema: number = 0;
-  public aufgaben?: Aufgabe[];
-  public theorien?: Theorie[];
+  public aufgaben: Aufgabe[] = []
+  public theorien: Theorie[] = [];
+  displayedColumns: string[] = ['id', 'titel']
+
+  type: string = ''
+  inhaltId: number = 0
 
   constructor(private route: ActivatedRoute, private ads: AufgabenDataService, private tds: TheorieDataService){}
 
   ngOnInit(){
     this.subThema = this.route.snapshot.params['id'];
-    if (this.subThema != 0) {
-      this.getAufgaben(); 
-      this.getTheorie();
-    }
+    this.subThema != 0 ? this.getContents() : console.log("Kein Sub-Thema gefunden")
   }
-  getAufgaben(){
+  getContents(){
     this.aufgaben = this.ads.aufgabenInhalt.filter(e => e.parentId == this.subThema);
-  }
-  getTheorie(){
     this.theorien = this.tds.theorieInhalte.filter(e => e.parentId == this.subThema);
+  }
+  setAufgabe(id: number){
+    this.inhaltId = id
+    this.type = "aufgabe"
+  }
+  setTheorie(id: number){
+    this.inhaltId = id
+    this.type = "theorie"
   }
 }

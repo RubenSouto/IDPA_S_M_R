@@ -6,6 +6,7 @@ import { AccountComponent } from './account/account.component';
 import { AuthComponent } from './auth/auth.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { SubThemaHomeComponent } from './sub-thema-home/sub-thema-home.component';
+import { SubInhaltComponent } from './sub-inhalt/sub-inhalt.component';
 
 const routes: Routes = [
   { path: "", redirectTo: '/home', pathMatch: 'full'},
