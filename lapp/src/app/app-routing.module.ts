@@ -7,15 +7,16 @@ import { AuthComponent } from './auth/auth.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { SubThemaHomeComponent } from './sub-thema-home/sub-thema-home.component';
 import { SubInhaltComponent } from './sub-inhalt/sub-inhalt.component';
+import { AuthGuardService } from './auth-guard.service';
 
 const routes: Routes = [
-  { path: "", redirectTo: '/home', pathMatch: 'full'},
-  { path: "home", component: ThemaComponent},
-  { path: "thema/:id", component: SubThemaComponent},
-  { path: "subthema/:id", component: SubThemaHomeComponent},
+  { path: "home", component: ThemaComponent, canActivate: [AuthGuardService]},
+   { path: 'account', component: AccountComponent, canActivate: [AuthGuardService]},
+  { path: "thema/:id", component: SubThemaComponent, canActivate: [AuthGuardService]},
+  { path: "subthema/:id", component: SubThemaHomeComponent, canActivate: [AuthGuardService]},
   { path: 'signin', component: AuthComponent},
   { path: 'signup', component: SignUpComponent},
-  { path: 'account', component: AccountComponent}
+  { path: '', redirectTo: '/home', pathMatch: 'prefix'},
 ];
 
 @NgModule({
