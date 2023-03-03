@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core'
 import { FormBuilder } from '@angular/forms'
-import { AuthSession } from '@supabase/supabase-js'
+import { AuthError, AuthSession } from '@supabase/supabase-js'
 import { Profile, SupabaseService } from '../supabase.service'
 
 @Component({
@@ -12,7 +12,7 @@ export class AccountComponent implements OnInit {
   loading = false
   profile!: Profile
 
-  session!: AuthSession
+  session = this.supabase.getsession()
 
   updateProfileForm = this.formBuilder.group({
     username: '',
@@ -23,7 +23,7 @@ export class AccountComponent implements OnInit {
   constructor(private readonly supabase: SupabaseService, private formBuilder: FormBuilder) {}
 
   async ngOnInit(): Promise<void> {
-    this.session = this.supabase.getsession() as AuthSession;
+    //this.session = this.supabase.getsession() as AuthSession;
     await this.getProfile()
 
     const { username, website, avatar_url } = this.profile
@@ -37,7 +37,9 @@ export class AccountComponent implements OnInit {
   async getProfile() {
     try {
       this.loading = true
-      const { user } = this.session
+      if(!this.session) throw new AuthError("no session available")
+      
+      const { user } = (this.session)
       let { data: profile, error, status } = await this.supabase.profile(user)
 
       if (error && status !== 406) {
@@ -59,6 +61,7 @@ export class AccountComponent implements OnInit {
   async updateProfile(): Promise<void> {
     try {
       this.loading = true
+      if(!this.session) throw new AuthError("no session available")
       const { user } = this.session
 
       const username = this.updateProfileForm.value.username as string

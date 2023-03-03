@@ -45,6 +45,7 @@ button{
 button:hover{
     transition: 200ms;
     transform: scale(1.1)
+}
 
 .main {
     width: 30%;
@@ -58,3 +59,5 @@ button:hover{
     cursor: pointer;
     background-color: brown;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
