@@ -1,5 +1,5 @@
 <div class="main">
-  <table mat-table [dataSource]="theorien" class="mat-elevation-z8">
+  <table mat-table [dataSource]="theorien">
   
     <!-- Position Column -->
     <ng-container matColumnDef="id">
@@ -17,7 +17,7 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="setTheorie(row.id)" class="dataRow"></tr>
   </table>
   <div style="height: 30px;"></div>
-  <table mat-table [dataSource]="aufgaben" class="mat-elevation-z8">
+  <table mat-table [dataSource]="aufgaben">
     
       <!-- Position Column -->
       <ng-container matColumnDef="id">
@@ -37,4 +37,9 @@
 </div>
 <div>
   <app-sub-inhalt [inhaltId]="inhaltId" [inhaltType]="type"></app-sub-inhalt>
+</div>
+<div class="footer">
+  <button *ngIf="checkPrevious()" [routerLink]="['/subthema', subThema-1]">Vorheriges Subthema</button>
+  <button [routerLink]="['/thema', thema]">Zurück zur SubThemen Auswahl</button>
+  <button *ngIf="checkNext()" [routerLink]="['/subthema', nextSubThema]">Nächstes SubThema</button>
 </div>

@@ -25,6 +25,7 @@ export class SubInhaltComponent {
   @Input() 
   set inhaltType(value: string){
     this._inhaltType = value
+    this.getInhalt()
   }
   get inhaltType(): string {
     return this._inhaltType;
