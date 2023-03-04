@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: "home", component: ThemaComponent, canActivate: [AuthGuardService]},
    { path: 'account', component: AccountComponent, canActivate: [AuthGuardService]},
   { path: "thema/:id", component: SubThemaComponent, canActivate: [AuthGuardService]},
-  { path: "subthema/:id", component: SubThemaHomeComponent, canActivate: [AuthGuardService]},
+  { path: "subthema/:subId", component: SubThemaHomeComponent, canActivate: [AuthGuardService]},
   { path: 'signin', component: AuthComponent},
   { path: 'signup', component: SignUpComponent},
   { path: '', redirectTo: '/home', pathMatch: 'prefix'},
