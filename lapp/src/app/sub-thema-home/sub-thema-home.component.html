@@ -16,9 +16,9 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="setTheorie(row.id)" class="dataRow"></tr>
   </table>
-  <div style="height: 30px;"></div>
-  <table mat-table [dataSource]="aufgaben">
-    
+  <div class="aside">
+    <table mat-table [dataSource]="theorien">
+
       <!-- Position Column -->
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef> ID </th>
@@ -35,9 +35,11 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="setAufgabe(row.id)" class="dataRow"></tr>
   </table>
 </div>
-<div>
-  <app-sub-inhalt [inhaltId]="inhaltId" [inhaltType]="type"></app-sub-inhalt>
-</div>
+  <div class="content">
+    <div class="content-wrapper">
+      <app-sub-inhalt [inhaltId]="inhaltId" [inhaltType]="type"></app-sub-inhalt>
+    </div>
+  </div>
 <div class="footer">
   <button *ngIf="checkPrevious()" [routerLink]="['/subthema', subThema-1]">Vorheriges Subthema</button>
   <button [routerLink]="['/thema', thema]">Zurück zur SubThemen Auswahl</button>

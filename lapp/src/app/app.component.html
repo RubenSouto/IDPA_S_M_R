@@ -1,8 +1,11 @@
 <div class="container">
-  <header>
+  <header class="header">
     <button [disabled]="this.session == null" class="button" (click)="home()">Home</button>
     <button [disabled]="this.session == null" class="button" (click)="signOut()">Sign Out</button>
     <button [disabled]="this.session == null" class="acccount-button" (click)="account()">Account</button>
   </header>
   <router-outlet></router-outlet>
+  <footer class="footer">
+    <p>trademark</p>
+  </footer>
 </div>
