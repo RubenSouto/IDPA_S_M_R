@@ -18,7 +18,7 @@ export class SubThemaHomeComponent {
   public nextSubThema: number = 0;
   public aufgaben: Aufgabe[] = []
   public theorien: Theorie[] = [];
-  displayedColumns: string[] = ['id', 'titel']
+  displayedColumns: string[] = ['titel']
 
   type: string = ''
   inhaltId: number = 0

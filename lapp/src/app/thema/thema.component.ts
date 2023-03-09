@@ -11,7 +11,7 @@ import {Thema} from '../shared/interface/thema';
 export class ThemaComponent {
 
   themaArr: Thema[] = []
-  displayedColumns: string[] = ['id', 'titel']
+  displayedColumns: string[] = ['id','titel']
 
   constructor(private data: HardCodeThemaDataService){ }
 

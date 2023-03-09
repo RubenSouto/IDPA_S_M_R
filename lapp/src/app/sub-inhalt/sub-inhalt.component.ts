@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { AufgabenDataService } from '../shared/aufgaben-data.service';
-import { Aufgabe, Thema } from '../shared/interface/thema';
+import { Aufgabe, Thema, Theorie } from '../shared/interface/thema';
 import { TheorieDataService } from '../shared/theorie-data.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { TheorieDataService } from '../shared/theorie-data.service';
   styleUrls: ['./sub-inhalt.component.css']
 })
 export class SubInhaltComponent {
-  inhalt?: Aufgabe | Thema
+  inhalt?: Aufgabe | Theorie
   private _inhaltId: number = 0
   private _inhaltType: string = ""
     
@@ -38,5 +38,7 @@ export class SubInhaltComponent {
   getInhalt(){
     this.inhaltType == "theorie"? this.inhalt = this.ts.theorieInhalte.filter(e => e.id == this.inhaltId)[0]
     : this.inhalt = this.as.aufgabenInhalt.filter(e => e.id == this.inhaltId)[0]
+
+    console.log(this.inhalt)
   }
 }

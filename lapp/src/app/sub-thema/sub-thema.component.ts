@@ -12,7 +12,7 @@ export class SubThemaComponent {
 
   public thema: number = 0;
   public subThemas: SubThema[] = [];
-  displayedColumns: string[] = ['id', 'titel']
+  displayedColumns: string[] = ['titel']
 
   public constructor(private route: ActivatedRoute, private ds: SubThemaDataService){}
 
