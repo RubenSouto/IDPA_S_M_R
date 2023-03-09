@@ -14,8 +14,8 @@ export class TheorieDataService {
         id: 1,
         titel: "Wahrnehmung von Temperatur",
         inhalt: 
-        "Im Alltag sagen wir zu sachen warm/kalt je nach dem wie wir es empfinden. "+
-        "Dies ist aber Subjektiv und nicht verlässlich, in der Physik machen wir damit Aussagen über die physikalische Grösse der Temperatur. "+
+        "Im Alltag sagen wir zu sachen warm/kalt je nach dem wie wir es empfinden.\n"+
+        "Dies ist aber Subjektiv und nicht verlässlich, in der Physik machen wir damit Aussagen über die physikalische Grösse der Temperatur. \n"+
         "Dies ist ein objektives Mass dafür, wie warm ein Körper ist."
       },
       {
@@ -23,7 +23,7 @@ export class TheorieDataService {
         id: 2,
         titel: "Definition: Temperatur",
         inhalt: 
-        "Die Temperatur gibt an, wie warm oder kalt ein Körper ist. "+
+        "Die Temperatur gibt an, wie warm oder kalt ein Körper ist. \n"+
         "Sie ist ein Mass für die mittlere kinetische Energie pro Teilchen."
       },
       {
@@ -31,24 +31,24 @@ export class TheorieDataService {
         id: 3,
         titel: "Funktionsweise von Temperaturmessgeräte",
         inhalt: 
-        "Viele dieser Geräte beruhen auf zwei Tatsachen: "+
-        "1. Viele feste, flüssige und gasförmige Stoffe dehnen sich aus, wenn sie erwärmt werden. "+
-        "2. Zwei verschieden Warme Gegenstände werden nach längerer Zeit die selbe Temperatur haben, die Körper sind dann im thermischen Gleichgewicht."
+        "Viele dieser Geräte beruhen auf zwei Tatsachen: <br>"+
+        "<ul><li>1. Viele feste, flüssige und gasförmige Stoffe dehnen sich aus, wenn sie erwärmt werden. </li>"+
+        "<li>2. Zwei verschieden Warme Gegenstände werden nach längerer Zeit die selbe Temperatur haben, die Körper sind dann im thermischen Gleichgewicht.</li></ul>"
       },
       {
         parentId: 2,
         id: 4,
         titel: "Temperaturskala: Celsius",
-        inhalt: "Der Schwede Anders Celsius schlug die Temperaturskala vor, die wir heute alle, ausser Amerikaner, kennen. "+
-        "Schmelztemperatur von Eis = 0 C. "+
+        inhalt: "Der Schwede Anders Celsius schlug die Temperaturskala vor, die wir heute alle, ausser Amerikaner, kennen. <br>"+
+        "Schmelztemperatur von Eis = 0 C. \n"+
         "Siedetemperatur von Wasser (bei Normaldruck) = 100 C. "
       },
       {
         parentId: 2,
         id: 7,
         titel: "Temperaturskala: Kelvin",
-        inhalt: "Die absolute Temperatur 'T' wird in Kelvin angegeben. "+
-        "Der absolute Nullpunkt ist die tiefstmögliche Temperatur im Universum, wo es theoretisch gar keine Teilchenbewegungen mehr gibt. "+
+        inhalt: "Die absolute Temperatur 'T' wird in Kelvin angegeben. <br>"+
+        "Der absolute Nullpunkt ist die tiefstmögliche Temperatur im Universum, wo es theoretisch gar keine Teilchenbewegungen mehr gibt. <br>"+
         "Die Kelvin-Skala beginnt bei 0 K = -273.15 C und besitzt die gleiche Skalierung wie die Celsius-Skala."
         //Formel für die Umrechnung einfügen
       },
@@ -56,31 +56,48 @@ export class TheorieDataService {
         parentId: 2,
         id: 8,
         titel: "Temperaturskala: Fahrenheit",
-        inhalt: "8"
+        inhalt: "Daniel Gabriel Fahrenheit erstellte die Fahrenheitskale. Dabei wählte er als Nullpunkt die tiefste Temperatur des strengen Winters von 1709. <br>"+
+        "Er hoffte mit diesem Nullpunkt negative Temperaturen vermeiden zu können. Als zweiter 'Fixpunkt' wählte er seine eigene Körpertemperatur, der er einfach die Zahl 100 zuordnete. <br>" +
+        "Dazu kommt noch, dass ein Schritt auf der Celsiusskala grösser ist als auf der Fahrenheitskala. <br>"+
+        "Siedepunkt von Wasser = 212 F, Schmelpunkt von Wasser = 32 F, das ist nicht ein Abstand von 180 F!" 
+        //Formel für die Umrechnung einfügen
       },
       {
-        parentId: 3,
+        parentId: 4,
         id: 9,
-        titel: "5",
-        inhalt: "5"
+        titel: "Beispiele aus dem Alltag und der Technik",
+        inhalt: "Diese Beispiel zeigen, dass die Ausdehnung von Körpern bei Erwärmung ein Phänomen ist, das man berücksichtigen muss: <br>"+
+        "Autobrücken müssen sich entsprechend der jahreszeitlichen Temperaturschwankungen dehnen oder zusammenziehen können. Dabei darf die Fahrbahn nicht unterbrochen werden. <br>"+
+        "Dieses Problem existiert auch bei Eisenbahnschienen. In Gegenden mit sehr grossen Temperaturschwankungen werden diese durch die thermische Ausdehnung verbogen."
       },
       {
-        parentId: 3,
+        parentId: 4,
         id: 10,
-        titel: "6",
-        inhalt: "6"
+        titel: "Formel für thermisch bedingte Verlängerung (Längenausdehnung)",
+        inhalt: "Die Verlängerung ist abhängig von den folgenden Grössen: <br>"+
+        "<ul><li>&#8710;T =Temperaturdifferenz </li>"+
+        "<li>&alpha; = (Längenausdehungskoeffizient) </li>"+
+        "<li>l<sub>0</sub> = Anfangslänge</li></ul><br>"+
+        // Formel
+        "l = l<sub>0</sub> + l<sub>0</sub> &times; &alpha; &times; &#8710;T"
       },
       {
-        parentId: 3,
+        parentId: 5,
         id: 11,
-        titel: "7",
-        inhalt: "7"
+        titel: "Funktionsweise von Flächenausdehnung",
+        inhalt: "Ein erwärmter Festkörper dehnt sich in alle Richtungen aus. <br>"+
+        "Bei einem Querschnitt kann man die Flächenausdehnung beobachten."
       },
       {
-        parentId: 3,
+        parentId: 5,
         id: 12,
-        titel: "8",
-        inhalt: "8"
+        titel: "Formel für die Flächenausdehnung",
+        inhalt: "<ul><li>&#8710;A = Flächendifferenz</li>"+
+        "<li>A<sub>0</sub> = Anfangsfläche</li>"+
+        "<li>&Beta; = Flächenausdehungskoeffizient</li>"+
+        "<li>&#8710;T = Temperaturdifferenz</li></ul><br>"+
+        //Formel
+        "Formel: &#8710;A = A<sub>0</sub> &times; &Beta; &times; &#8710;T"
       },
       {
         parentId: 4,
