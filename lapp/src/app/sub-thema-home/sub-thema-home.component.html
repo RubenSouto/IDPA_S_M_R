@@ -1,23 +1,6 @@
 <div class="main">
-  <table mat-table [dataSource]="theorien" class="mat-elevation-z8">
-  
-    <!-- Position Column -->
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef> ID </th>
-      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-    </ng-container>
-  
-    <!-- Name Column -->
-    <ng-container matColumnDef="titel">
-      <th mat-header-cell *matHeaderCellDef> Titel </th>
-      <td mat-cell *matCellDef="let element"> {{element.titel}} </td>
-    </ng-container>
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="setTheorie(row.id)" class="dataRow"></tr>
-  </table>
-  <div style="height: 30px;"></div>
-  <table mat-table [dataSource]="aufgaben" class="mat-elevation-z8">
+  <div class="aside">
+    <table mat-table [dataSource]="theorien">
     
       <!-- Position Column -->
       <ng-container matColumnDef="id">
@@ -32,9 +15,31 @@
       </ng-container>
     
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="setAufgabe(row.id)" class="dataRow"></tr>
-  </table>
-</div>
-<div>
-  <app-sub-inhalt [inhaltId]="inhaltId" [inhaltType]="type"></app-sub-inhalt>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="setTheorie(row.id)" class="dataRow"></tr>
+    </table>
+    <div style="height: 30px;"></div>
+    <table mat-table [dataSource]="aufgaben">
+      
+        <!-- Position Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="titel">
+          <th mat-header-cell *matHeaderCellDef> Titel </th>
+          <td mat-cell *matCellDef="let element"> {{element.titel}} </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="setAufgabe(row.id)" class="dataRow"></tr>
+    </table>
+  </div>
+
+  <div class="content">
+    <div class="content-wrapper">
+      <app-sub-inhalt [inhaltId]="inhaltId" [inhaltType]="type"></app-sub-inhalt>
+    </div>
+  </div>
 </div>
