@@ -1,36 +1,37 @@
-<div class="content">
-    <div class="form" aria-live="polite">
-      <h1 class="header">Sign in</h1>
-      <p class="description">Sign in with your E-Mail and Password</p>
-      <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" class="form-widget">
-          <label for="email">Email</label>
-          <input
-            id="email"
-            formControlName="email"
-            class="inputField"
-            type="email"
-            placeholder="Your email"
-          />
-          <label for="password">Password</label>
-          <input
-            id="password"
-            formControlName="password"
-            class="inputField"
-            type="password"
-            placeholder="Your password"
-          />
-          <button
-            type="submit"
-            class="button block"
-            [disabled]="loading"
-          >
-            {{ loading ? 'Loading' : 'SignIn' }}
-          </button>
-      </form>
+<div class="main">
+  <div class="aside"></div>
+  <div class="content">
+    <h1>Sign in</h1>
+    <p class="description">Sign in with your E-Mail and Password</p>
+    <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" class="form-widget">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          formControlName="email"
+          class="inputField"
+          type="email"
+          placeholder="Your email"
+        />
+        <label for="password">Password</label>
+        <input
+          id="password"
+          formControlName="password"
+          class="inputField"
+          type="password"
+          placeholder="Your password"
+        />
+        <button
+          type="submit"
+          class="button block"
+          [disabled]="loading"
+        >
+          {{ loading ? 'Loading' : 'SignIn' }}
+        </button>
+    </form>
 
-      <div>
-        <p>Don't have an account yet?</p>
-        <button routerLink="../signup">switch to SignUp!</button>
-      </div>
+    <div>
+      <p>Don't have an account yet?</p>
+      <button routerLink="../signup">switch to SignUp!</button>
     </div>
   </div>
+</div>
