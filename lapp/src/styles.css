@@ -1,4 +1,4 @@
-html, body, * {
+html, body, *{
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -12,7 +12,7 @@ router-outlet{
     height: 100vh;
     width: 100vw;
     display: grid;
-    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-rows: 60px 1fr 40px;
     grid-template-areas: 
         "header"
         "main"
@@ -34,22 +34,32 @@ router-outlet{
 .main {
     grid-area: main;
     display: grid;
+    width: 100%;
+    padding-block: 5px;
     grid-template-columns: 1fr 2fr;
+    grid-template-rows: 100%;
     grid-template-areas: 
         "aside content"
     ;
-    width: 100%;
-    height: 100%;
+    overflow: hidden;
+
 }
 
     .aside {
         grid-area: aside;
         width: 100%;
-        height: 100%;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+
+    .aside-content{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-content: center;
+        justify-content: start;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        direction: rtl;
+        border-right: 1px solid grey;
     }
 
     .aside-footer{
@@ -59,16 +69,12 @@ router-outlet{
     }
 
     .content{
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        width: 100%;
+        padding: 10px;
     }
 
-    .content-wrapper{
-        width: auto;
-        height: auto;
-        margin: auto;
+    .content p {
+        text-align: center;
+        margin-block: auto;
     }
 
 .footer {
@@ -84,11 +90,11 @@ router-outlet{
 }
 
 .form{
-    height: fit-content;
+    /*height: fit-content;
     width: fit-content;
     margin-inline: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;*/
 }
 
 input {
@@ -98,7 +104,8 @@ input {
 }
 
 button{
-    height: 25px;
+    min-height: 25px;
+    height: fit-content;
     padding-inline: 5px;
     color: black;
     background-color: white;

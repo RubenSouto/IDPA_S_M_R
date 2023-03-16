@@ -5,6 +5,9 @@ import { SubThema } from '../shared/interface/thema';
 
 @Component({
   selector: 'app-sub-thema',
+  host: {
+    class: 'main'
+  },
   templateUrl: './sub-thema.component.html',
   styleUrls: ['./sub-thema.component.css']
 })
