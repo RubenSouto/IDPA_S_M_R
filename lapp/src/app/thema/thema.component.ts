@@ -5,6 +5,9 @@ import {Thema} from '../shared/interface/thema';
 
 @Component({
   selector: 'app-thema',
+  host: {
+    class: 'main'
+  },
   templateUrl: './thema.component.html',
   styleUrls: ['./thema.component.css']
 })

@@ -1,24 +1,24 @@
-<div class="main">
-  <div class="aside">
-    <table mat-table [dataSource]="subThemas">
+<div class="aside">
+  <div class="aside-content">
+  <table mat-table [dataSource]="subThemas">
 
-      <!-- Position Column -->
-      <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef> ID </th>
-        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-      </ng-container>
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
 
-      <!-- Name Column -->
-      <ng-container matColumnDef="titel">
-        <th mat-header-cell *matHeaderCellDef> Titel </th>
-        <td mat-cell *matCellDef="let element"> {{element.titel}} </td>
-      </ng-container>
+    <!-- Name Column -->
+    <ng-container matColumnDef="titel">
+      <th mat-header-cell *matHeaderCellDef> Titel </th>
+      <td mat-cell *matCellDef="let element"> {{element.titel}} </td>
+    </ng-container>
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/subthema', row.id]" class="dataRow"></tr>
-    </table>
-    <div class="aside-footer">
-      <button [routerLink]="['/home']">Zurück</button>
-    </div>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/subthema', row.id]" class="dataRow"></tr>
+  </table>
+  </div>
+  <div class="aside-footer">
+    <button [routerLink]="['/home']">Zurück</button>
   </div>
 </div>
