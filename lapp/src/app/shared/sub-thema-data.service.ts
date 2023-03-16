@@ -27,7 +27,7 @@ export class SubThemaDataService {
       {
         parentId:1,
         id:4,
-        titel: "1.3.1 Längenausdehung von Festkörpern"
+        titel: "1.3.1 Längenausdehung"
       },
       {
         parentId:1,
@@ -47,17 +47,17 @@ export class SubThemaDataService {
       {
         parentId:1,
         id:8,
-        titel: "1.3.3.1 Veränderung der Dichte bei Temperaturänderungen"
-      },
-      {
-        parentId:1,
-        id:9,
         titel: "1.4 Wärme"
       },
       {
         parentId:1,
-        id:10,
+        id:9,
         titel: "1.4.1 Beziehung Wärme-Temperatur"
+      },
+      {
+        parentId:1,
+        id:10,
+        titel: "1.4.2 Verbrennungswärme"
       },
       {
         parentId:1,
