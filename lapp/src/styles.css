@@ -73,8 +73,12 @@ router-outlet{
     }
 
     .content p {
-        text-align: center;
+        text-align: left;
         margin-block: auto;
+    }
+
+    .content li {
+        list-style: none;
     }
 
 .footer {
