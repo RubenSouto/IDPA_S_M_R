@@ -1,5 +1,4 @@
 <div class="main">
-  <div class="aside"></div>
   <div class="content">
     <div class="content-wrapper">
       <h1>Sign Up!</h1>
@@ -25,11 +24,12 @@
             class="button block"
             [disabled]="loading"
           >
-            {{ loading ? 'Loading' : 'SignUp' }}
+            {{ loading ? 'Loading' : 'Sign Up' }}
           </button>
       </form>
       <div>
-        <button routerLink="../signin">switch to SignIn</button>
+        <p>Already have an account?</p>
+        <button routerLink="../signin">switch to Sign In</button>
       </div>
     </div>
   </div>

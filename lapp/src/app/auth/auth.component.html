@@ -1,8 +1,6 @@
 <div class="main">
-  <div class="aside"></div>
   <div class="content">
-    <h1>Sign in</h1>
-    <p class="description">Sign in with your E-Mail and Password</p>
+    <h1>Sign In!</h1>
     <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" class="form-widget">
         <label for="email">Email</label>
         <input
@@ -25,13 +23,13 @@
           class="button block"
           [disabled]="loading"
         >
-          {{ loading ? 'Loading' : 'SignIn' }}
+          {{ loading ? 'Loading' : 'Sign In' }}
         </button>
     </form>
 
     <div>
       <p>Don't have an account yet?</p>
-      <button routerLink="../signup">switch to SignUp!</button>
+      <button routerLink="../signup">switch to Sign Up</button>
     </div>
   </div>
 </div>
