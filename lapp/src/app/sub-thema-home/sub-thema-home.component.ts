@@ -7,6 +7,9 @@ import { TheorieDataService } from '../shared/theorie-data.service'
 
 @Component({
   selector: 'app-sub-thema-home',
+  host: {
+    class: 'main'
+  },
   templateUrl: './sub-thema-home.component.html',
   styleUrls: ['./sub-thema-home.component.css']
 })
