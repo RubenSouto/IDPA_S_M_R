@@ -1,1 +1,12 @@
-<p *ngIf="inhalt" [innerHTML]="inhalt.inhalt"></p>
+<div>
+    <p *ngIf="aufgabe" [innerHTML]="aufgabe.inhalt"></p>
+    <p *ngIf="theorie" [innerHTML]="theorie.inhalt"></p>
+</div>
+<div *ngIf="aufgabe">
+    <form class="example-form" [formGroup]="formGroup">
+        <mat-form-field class="mat-input-valid">
+          <mat-label>Resultat</mat-label>
+          <input matInput placeholder="Antwort" type="text" formControlName="answer">
+        </mat-form-field>
+    </form>
+</div>
