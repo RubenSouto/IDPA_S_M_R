@@ -235,14 +235,72 @@ export class TheorieDataService {
         parentId: 11,
         id: 26,
         titel: "Formel für Schmelwärme / Erstarrungswärme",
-        inhalt: ""
+        inhalt: "<ul><li>Q<sub>f</sub> = Schmelwärme / Erstarrungswärme</li>"+
+        "<li>L<sub>f</sub> = spezifische Schmelzwärme</li>"+
+        "<li>m = Masse des Stoffs in kg</li></ul><br>"+
+        "Q<sub>f</sub> = L<sub>f</sub> &times; m"
       },
       {
         parentId: 11,
         id: 27,
         titel: "Formel für Verdampfungswärme / Kondensationswärme",
-        inhalt: ""
-      }
+        inhalt: "<ul><li>Q<sub>u</sub> = Verdampfungswärme / Kondensationswärme</li>"+
+        "<li>L<sub>u</sub> = spezifische Verdampfwärme</li>"+
+        "<li>m = Masse des Stoffs in kg</li></ul><br>"+
+        "Q<sub>f</sub> = L<sub>f</sub> &times; m"
+      },
+      {
+        parentId: 12,
+        id: 28,
+        titel: "Wärme",
+        inhalt: "In der Physik bezeichnet man Energie die zwischen zei Körpern aufgrund "+
+        "der Temperaturdifferenz ausgetauscht wird als <b>Wärme</b> <br>"+
+        "Q ist das Formzelzeichen, Einheit = Joule"+
+        "<ul><li>Wärme ist eine Prozessgrösse (Wie Arbeit)<li>"+
+        "<li>Ein Körper selbst hat keine Wärme. Mit der Wärme beschreibt man wie viel ein Körper Energie abgibt oder aufnimmt."+
+        "Wärme beschreibt also die Veränderung und nicht einen Zustand</li>"+
+        "<li>Die Energie wird aufgrund der Temperaturdifferenz übertrage."+
+        "Bei der Arbeit passiert dies weil ein Körper eine Kraft auf einen anderen ausübt.</li></ul>"
+      },
+      {
+        parentId: 12,
+        id: 29,
+        titel: "Innere Energie",
+        inhalt: "Als innere Energie bezeichnet man die Energie, die im System steckt."+
+        "Diese nimmt durch Wärmefluss zu oder ab. <br>"+
+        "U ist das Formzelzeichen, Einheit = Joule <br>"+
+        "<ul><li>Die innere Energie ist eine Zustandsgrösse. Sie beschreibt, wie viel Energie im Körper steckt<li>"+
+        "<li>Nicht zur inneren Energie eines Körpers gehört: die kinetische Energie & die potentielle Energie</li>"+
+        "<li>Die innere Energie lebst kann man nicht messen. Messbar ist nur die Änderung der inneren Energie</li></ul>"
+      },
+      {
+        parentId: 12,
+        id: 30,
+        titel: "1. Hauptsatz der Thermodynamik",
+        inhalt: "<ul><li>&#8710; U = Änderung der inneren Energie</li>"+
+        "<li>Q = Wärme</li>"+
+        "<li>W = Arbeit(Work)</li></ul><br>"+
+        "Die ist eigentlich 'nur' ein Spezialfall der Energieerhaltung für ein offenes System: <br>"+
+        "&#8710; Energie = &#8710; E<sub>kin</sub> + &#8710; E<sub>pot</sub> + &#8710; E<sub>spann</sub> + &#8710; U <br>"+
+        "&#8710; Energie = W + Q <br>"+
+        "Für ein geschlossenes System würde der 1 Hauptsatz lauten: <br>"+
+        "&#8710; Energie = 0 <br>"+
+        "&#8710; U = 0 <br>"
+      },
+      {
+        parentId: 12,
+        id: 31,
+        titel: "2. Hauptsatz der Thermodynamik",
+        inhalt: "Wärme (Q) fliesst immer vom Körper mit der höheren Temperatur zum Körper mit der tieferen Temperatur.<br>"+
+        "<ul><li>Im thermischen Gleichgewicht befinden sich zwei Körper dann, wenn ihre Temperatur gleich ist. An diesem Punkt wird keine Wärme mehr ausgetauscht.</li>"+
+        "<li>Nur wenn eine Temperaturdifferenz existiert fliesst Wärme.</li></ul>"
+      },
+      {
+        parentId: 12,
+        id: 32,
+        titel: "3. Hauptsatz der Thermodynamik (Nernst-Theorem)",
+        inhalt: "Es ist unmöglich ein System bis zum absoluten Nullpunkt (0 Kelvin) abzukülen."
+      },
     ]
   }
 }

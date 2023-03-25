@@ -12,6 +12,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { SubThemaHomeComponent } from './sub-thema-home/sub-thema-home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule  } from "@angular/material/table";
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { SubInhaltComponent } from './sub-inhalt/sub-inhalt.component';
 
 @NgModule({
@@ -23,14 +25,16 @@ import { SubInhaltComponent } from './sub-inhalt/sub-inhalt.component';
     SubThemaComponent,
     SignUpComponent,
     SubThemaHomeComponent,
-    SubInhaltComponent
+    SubInhaltComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
