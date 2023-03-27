@@ -49,7 +49,7 @@ export class SubInhaltComponent {
   validate(answer: string){
     console.log(answer)
     if (answer == this.aufgabe?.loesung) {
-      console.log("geilomatico")
+      alert(answer + " war die richtige Antwort")
     }
   }
 
