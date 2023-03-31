@@ -1,44 +1,59 @@
 <div class="aside">
+  <!-- Der Inhalt der Asidespalte ist hier -->
   <div class="aside-content">
-  <table mat-table [dataSource]="theorien">
+    <!-- Eine Tabelle für die Daten von Theorien -->
+    <table mat-table [dataSource]="theorien">
 
-    <!-- Position Column -->
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef> ID </th>
-      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-    </ng-container>
-  
-    <!-- Name Column -->
-    <ng-container matColumnDef="titel">
-      <th mat-header-cell *matHeaderCellDef> Titel </th>
-      <td mat-cell *matCellDef="let element"> {{element.titel}} </td>
-    </ng-container>
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="setTheorie(row.id)" class="dataRow"></tr>
-  </table>
-  <table mat-table [dataSource]="aufgaben">
+      <!-- Spalte für die ID -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
 
-    <!-- Position Column -->
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef> ID </th>
-      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-    </ng-container>
-  
-    <!-- Name Column -->
-    <ng-container matColumnDef="titel">
-      <th mat-header-cell *matHeaderCellDef> Titel </th>
-      <td mat-cell *matCellDef="let element"> {{element.titel}} </td>
-    </ng-container>
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="setAufgabe(row.id)" class="dataRow"></tr>
-  </table>
-</div>
+      <!-- Spalte für den Titel -->
+      <ng-container matColumnDef="titel">
+        <th mat-header-cell *matHeaderCellDef> Titel </th>
+        <td mat-cell *matCellDef="let element"> {{element.titel}} </td>
+      </ng-container>
+
+      <!-- Header-Zeile für die Tabelle -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      
+      <!-- Eine Zeile für jede Theorie in den Daten -->
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="setTheorie(row.id)" class="dataRow"></tr>
+    </table>
+
+    <!-- Eine zweite Tabelle für die Daten von Aufgaben -->
+    <table mat-table [dataSource]="aufgaben">
+
+      <!-- Spalte für die ID -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+      <!-- Spalte für den Titel -->
+      <ng-container matColumnDef="titel">
+        <th mat-header-cell *matHeaderCellDef> Titel </th>
+        <td mat-cell *matCellDef="let element"> {{element.titel}} </td>
+      </ng-container>
+
+      <!-- Header-Zeile für die Tabelle -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      
+      <!-- Eine Zeile für jede Aufgabe in den Daten -->
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="setAufgabe(row.id)" class="dataRow"></tr>
+    </table>
+  </div>
+
+  <!-- Fußzeile der Asidespalte mit Navigationselementen -->
   <div class="aside-footer">
     <button *ngIf="checkPrevious()" [routerLink]="['/subthema', subThema-1]">Vorheriges Subthema</button>
     <button [routerLink]="['/thema', thema]">Zurück zur Subthemen Auswahl</button>
     <button *ngIf="checkNext()" [routerLink]="['/subthema', nextSubThema]">Nächstes SubThema</button>
   </div>
+  
 </div>
+
+<!-- Ein Inhaltsbereich mit einer ID und einem Typ -->
 <app-sub-inhalt class="content" [inhaltId]="inhaltId" [inhaltType]="type"></app-sub-inhalt>

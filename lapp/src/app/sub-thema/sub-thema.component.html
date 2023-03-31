@@ -1,24 +1,33 @@
+<!-- Dies ist das HTML-Template für die Ansicht der Subthemen einer bestimmten Kategorie -->
+
 <div class="aside">
+
+  <!-- Der Bereich für den Inhalt der Tabelle -->
   <div class="aside-content">
-  <table mat-table [dataSource]="subThemas">
+    <table mat-table [dataSource]="subThemas">
 
-    <!-- Position Column -->
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef> ID </th>
-      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-    </ng-container>
+      <!-- Definieren der Spalten -->
+      <!--ID Spalte-->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
 
-    <!-- Name Column -->
-    <ng-container matColumnDef="titel">
-      <th mat-header-cell *matHeaderCellDef> Titel </th>
-      <td mat-cell *matCellDef="let element"> {{element.titel}} </td>
-    </ng-container>
+      <!--Titel Spalte-->
+      <ng-container matColumnDef="titel">
+        <th mat-header-cell *matHeaderCellDef> Titel </th>
+        <td mat-cell *matCellDef="let element"> {{element.titel}} </td>
+      </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/subthema', row.id]" class="dataRow"></tr>
-  </table>
+      <!-- Anzeigen der Spalten und der Datensätze -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/subthema', row.id]" class="dataRow"></tr>
+    </table>
   </div>
+
+  <!-- Der Bereich für den Footer -->
   <div class="aside-footer">
     <button [routerLink]="['/home']">Zurück</button>
   </div>
+
 </div>

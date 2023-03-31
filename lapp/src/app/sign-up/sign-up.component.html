@@ -2,9 +2,12 @@
   <div class="aside"></div>
   <div class="content">
     <div class="content-wrapper">
+      <!-- Überschrift des Formulars -->
       <h1>Sign Up!</h1>
+      <!-- Formular mit Form-Group und Submit-Funktion -->
       <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" class="form-widget">
           <label for="email">Email</label>
+          <!-- E-Mail-Eingabefeld -->
           <input
             id="email"
             formControlName="email"
@@ -13,6 +16,7 @@
             placeholder="Your email"
           />
           <label for="password">Password</label>
+          <!-- Passwort-Eingabefeld -->
           <input
             id="password"
             formControlName="password"
@@ -20,14 +24,17 @@
             type="password"
             placeholder="Your password"
           />
+          <!-- Submit-Button -->
           <button
             type="submit"
             class="button block"
             [disabled]="loading"
           >
+            <!-- Zustand des Buttons: 'Loading' oder 'SignUp' -->
             {{ loading ? 'Loading' : 'SignUp' }}
           </button>
       </form>
+      <!-- Button zum Wechseln zwischen SignUp und SignIn -->
       <div>
         <button routerLink="../signin">switch to SignIn</button>
       </div>
