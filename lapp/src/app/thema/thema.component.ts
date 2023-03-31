@@ -13,12 +13,12 @@ import {Thema} from '../shared/interface/thema';
 })
 export class ThemaComponent {
 
-  themaArr: Thema[] = []
-  displayedColumns: string[] = ['id','titel']
+  themaArr: Thema[] = [] // Initializing an empty array to store Thema objects
+  displayedColumns: string[] = ['id','titel'] // Defining column headers to be displayed in the table
 
   constructor(private data: HardCodeThemaDataService){ }
 
   ngOnInit(){
-    this.themaArr = this.data.themaList
+    this.themaArr = this.data.themaList // Assigning Thema objects from the service to themaArr
   }
 }

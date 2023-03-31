@@ -13,7 +13,7 @@ export class TheorieDataService {
         parentId: 1,
         id: 1,
         titel: "Wahrnehmung von Temperatur",
-        inhalt: 
+        inhalt:
         "Im Alltag sagen wir zu sachen warm/kalt je nach dem wie wir es empfinden.<br>"+
         "Dies ist aber Subjektiv und nicht verlässlich, in der Physik machen wir damit Aussagen über die physikalische Grösse der Temperatur. <br>"+
         "Dies ist ein objektives Mass dafür, wie warm ein Körper ist."
@@ -22,7 +22,7 @@ export class TheorieDataService {
         parentId: 1,
         id: 2,
         titel: "Definition: Temperatur",
-        inhalt: 
+        inhalt:
         "Die Temperatur gibt an, wie warm oder kalt ein Körper ist. <br>"+
         "Sie ist ein Mass für die mittlere kinetische Energie pro Teilchen."
       },
@@ -30,7 +30,7 @@ export class TheorieDataService {
         parentId: 2,
         id: 3,
         titel: "Funktionsweise von Temperaturmessgeräte",
-        inhalt: 
+        inhalt:
         "Viele dieser Geräte beruhen auf zwei Tatsachen: <br>"+
         "<ul><li>1. Viele feste, flüssige und gasförmige Stoffe dehnen sich aus, wenn sie erwärmt werden. </li>"+
         "<li>2. Zwei verschieden Warme Gegenstände werden nach längerer Zeit die selbe Temperatur haben, die Körper sind dann im thermischen Gleichgewicht.</li></ul>"
@@ -61,7 +61,7 @@ export class TheorieDataService {
         inhalt: "Daniel Gabriel Fahrenheit erstellte die Fahrenheitskale. Dabei wählte er als Nullpunkt die tiefste Temperatur des strengen Winters von 1709. <br>"+
         "Er hoffte mit diesem Nullpunkt negative Temperaturen vermeiden zu können. Als zweiter 'Fixpunkt' wählte er seine eigene Körpertemperatur, der er einfach die Zahl 100 zuordnete. <br>" +
         "Dazu kommt noch, dass ein Schritt auf der Celsiusskala grösser ist als auf der Fahrenheitskala. <br>"+
-        "Siedepunkt von Wasser = 212 F, Schmelpunkt von Wasser = 32 F, das ist nicht ein Abstand von 180 F!<br>"+ 
+        "Siedepunkt von Wasser = 212 F, Schmelpunkt von Wasser = 32 F, das ist nicht ein Abstand von 180 F!<br>"+
         //Formel
         "T [F] = 9/5 C + 32 F"
       },
@@ -187,7 +187,7 @@ export class TheorieDataService {
         "<li>proportional zur Temperaturänderung ist (Wasser um 10 Grad zu erwärmen braucht doppelt so viel Energie wie es um 5 Grad zu erwärmen)</li></ul>"
       },
       {
-        parentId: 10, 
+        parentId: 10,
         id: 22,
         titel: "Heizwert",
         inhalt: "Der Heizwert gibt an wie viel Energie durch die Verbrennung von 1kg/1m<sup>3</sup> von einem Stoff gewonnen wird. "+
@@ -204,7 +204,7 @@ export class TheorieDataService {
         "Q<sub>Brenn</sub> = m &times; H"
       },
       {
-        parentId: 11, 
+        parentId: 11,
         id: 24,
         titel: "Grundlagen der Phasenübergänge",
         inhalt: "Materie kann in 3 Zuständen vorkommen: "+
@@ -213,7 +213,7 @@ export class TheorieDataService {
         "<li>gasförmig</li></ul><br>"
       },
       {
-        parentId: 11, 
+        parentId: 11,
         id: 25,
         titel: "Änderung des Aggregatzustandes",
         inhalt: "Die Temperatur steigt/sinkt linear, bis zur Umwandlung in den nächsten Zustand.<br>"+
@@ -260,7 +260,7 @@ export class TheorieDataService {
         titel: "Innere Energie",
         inhalt: "Als innere Energie bezeichnet man die Energie, die im System steckt."+
         "Diese nimmt durch Wärmefluss zu oder ab. <br>"+
-        "U ist das Formzelzeichen, Einheit = Joule <br>"+
+        "U ist das Formelzeichen, Einheit = Joule <br>"+
         "<ul><li>Die innere Energie ist eine Zustandsgrösse. Sie beschreibt, wie viel Energie im Körper steckt<li>"+
         "<li>Nicht zur inneren Energie eines Körpers gehört: die kinetische Energie & die potentielle Energie</li>"+
         "<li>Die innere Energie lebst kann man nicht messen. Messbar ist nur die Änderung der inneren Energie</li></ul>"
@@ -314,7 +314,7 @@ export class TheorieDataService {
         parentId: 14,
         id: 35,
         titel: "Druck vs. Stoffmenge",
-        inhalt: "Zwischen Gasmenge (in mol) und dem Gasdruck herrscht eine ebenfalls simple Beziehung. Hält mn ein Gas mit konstantem Volumen und konstanter Temperatur, so stellt man experimentell fest, dass ein aufgepumpter Reifen mehr Luft (mehr Moleküle), somit auch grösseren Druck beinhaltet. <br>"+ 
+        inhalt: "Zwischen Gasmenge (in mol) und dem Gasdruck herrscht eine ebenfalls simple Beziehung. Hält mn ein Gas mit konstantem Volumen und konstanter Temperatur, so stellt man experimentell fest, dass ein aufgepumpter Reifen mehr Luft (mehr Moleküle), somit auch grösseren Druck beinhaltet. <br>"+
         "(P ~ n (in mol))  <br>"+
         "P = Druck, n = Anzahl Teilchen (Stoffmenge in mol) "
       },
@@ -323,7 +323,7 @@ export class TheorieDataService {
         id: 36,
         titel: "Druck vs. Volumen",
         inhalt: "Wird ein Ballon nur teilweise mit Luft gefüllt, so stellt man fest, dass er eine schlaffe Membran hat, also wenig Druck beinhaltet. <br>"+
-        "Verringert man danach das Volumen der Membran, welche dem Gas zur Verfügung steht, beobachtet man, dass die Membran straffer wird und somit der Druck steigt. <br>"+   
+        "Verringert man danach das Volumen der Membran, welche dem Gas zur Verfügung steht, beobachtet man, dass die Membran straffer wird und somit der Druck steigt. <br>"+
         "Dasselbe geschieht, wenn man eine konstante Gasmenge bei gleichbleibender Temperatur mit einer Pumpe auf ein kleineres Volumen zusammendrückt: <br>Je kleiner das Gasvolumen, desto grösser der Druck. <br>"+
         "<br>Daher: Der Druck ist umgekehrt proportional zum Volumen (P ~ 1/V) <br>"+
         "P = Druck, V = Volumen <br>"+
@@ -349,6 +349,12 @@ export class TheorieDataService {
         "P = Druck, V = Volumen <br>"+
         "N = n &times; N<sub>A</sub> <br>"+
         "<br>Wichtig: Temperaturen immer in Kelvin einsetzen! "
+      },
+      {
+        parentId: 3,
+        id: 38,
+        titel: "Wärmeausdehnung",
+        inhalt: "Hier beginnt das Subthema Wärmeausdehnung."
       },
     ]
   }

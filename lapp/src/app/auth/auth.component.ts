@@ -9,9 +9,10 @@ import { SupabaseService } from '../supabase.service'
   styleUrls: ['./auth.component.css'],
 })
 export class AuthComponent implements OnInit {
-  loading = false
-  signedIn = false
+  loading = false               // Variable "loading" initialisieren
+  signedIn = false              // Variable "signedIn" initialisieren
 
+  // Formular-Objekt "signInForm" mit den Feldern "email" und "password" initialisieren
   signInForm = this.formBuilder.group({
     email: '',
     password: '',
@@ -25,22 +26,22 @@ export class AuthComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  async onSubmit(): Promise<void> {
+  async onSubmit(): Promise<void> {         // Methode "onSubmit" für Formular-Submit-Event
     try {
-      this.loading = true
-      const email = this.signInForm.value.email as string
-      const password = this.signInForm.value.password as string
-      const { error } = await this.supabase.signIn(email, password)
+      this.loading = true                   // "loading" auf "true" setzen
+      const email = this.signInForm.value.email as string   // Benutzereingabe für "email" holen
+      const password = this.signInForm.value.password as string   // Benutzereingabe für "password" holen
+      const { error } = await this.supabase.signIn(email, password)   // Anmeldung durchführen
       if (error) throw error
       else this.signedIn = true
     } catch (error) {
       if (error instanceof Error) {
-        alert(error.message)
+        alert(error.message)                 // Fehlermeldung ausgeben
       }
     } finally {
-      this.signInForm.reset()
-      this.loading = false
-      if(this.signedIn) this.router.navigate(['home'])
+      this.signInForm.reset()                  // Formular zurücksetzen
+      this.loading = false                     // "loading" auf "false" setzen
+      if(this.signedIn) this.router.navigate(['home'])   // zur Home-Seite navigieren, falls Anmeldung erfolgreich war
     }
   }
 }
