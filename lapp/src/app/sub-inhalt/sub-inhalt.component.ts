@@ -15,8 +15,8 @@ export class SubInhaltComponent {
   private _inhaltId: number = 0
   private _inhaltType: string = ""
   public formGroup: FormGroup
-    
-  @Input() 
+
+  @Input()
   set inhaltId(value: number) {
     this._inhaltId = value;
     this.getInhalt()
@@ -25,7 +25,7 @@ export class SubInhaltComponent {
     return this._inhaltId;
   }
 
-  @Input() 
+  @Input()
   set inhaltType(value: string){
     this._inhaltType = value
     this.getInhalt()
@@ -49,7 +49,7 @@ export class SubInhaltComponent {
   validate(answer: string){
     console.log(answer)
     if (answer == this.aufgabe?.loesung) {
-      alert(answer + " war die richtige Antwort")
+      alert(answer + " ist die richtige Antwort")
     }
   }
 
