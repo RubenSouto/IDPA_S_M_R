@@ -1,8 +1,9 @@
-<div>
+
+<div class="conty">
     <p *ngIf="inhaltType == 'aufgabe'" [innerHTML]="aufgabe?.inhalt"></p>
     <p *ngIf="inhaltType == 'theorie'" [innerHTML]="theorie?.inhalt"></p>
 </div>
-<div *ngIf="inhaltType == 'aufgabe'">
+<div class="conty" *ngIf="inhaltType == 'aufgabe'">
     <form class="example-form" [formGroup]="formGroup">
         <mat-form-field class="mat-input-valid">
           <mat-label>Resultat</mat-label>
