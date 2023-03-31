@@ -73,11 +73,6 @@ export class SubThemaDataService {
         parentId:1,
         id:13,
         titel: "1.7 Mischprozesse"
-      },
-      {
-        parentId:1,
-        id:14,
-        titel: "1.8 Gasgesetze für ideale Gase"
       }
     ]
   }

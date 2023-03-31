@@ -303,54 +303,6 @@ export class TheorieDataService {
         "Q1, Q2, Q3, …, Qn := die von Systemteilen aufgenommenen bzw. abgegebenen Wärmen. "
       },
       {
-        parentId: 14,
-        id: 34,
-        titel: "Druck vs Temperatur",
-        inhalt: "Wenn wir wissen wollen, wie sich der Druck in Abhängigkeit der Temperatur ändert, müssen wir und das Gasthermometer vorstellen. Dieses beinhaltet ein Gas wie Helium oder Wasserstoff, welches bei konstant bleibendem Volumen langsam erwärmt wird. Die aus diesem Experiment resultierende Kurve zeigt dann bei konstantem Gasvolumen sowie konstanter Menge eine lineare Abhängigkeit des Gasdrucks von der absoluten Temperatur, also genauer gesagt entsteht eine Gerade. <br>"+
-        "<br>Der Druck ist also proportional zur absoluten Temperatur (P ~ T) <br>"+
-        "P = Druck, T = Temperatur "
-      },
-      {
-        parentId: 14,
-        id: 35,
-        titel: "Druck vs. Stoffmenge",
-        inhalt: "Zwischen Gasmenge (in mol) und dem Gasdruck herrscht eine ebenfalls simple Beziehung. Hält mn ein Gas mit konstantem Volumen und konstanter Temperatur, so stellt man experimentell fest, dass ein aufgepumpter Reifen mehr Luft (mehr Moleküle), somit auch grösseren Druck beinhaltet. <br>"+
-        "(P ~ n (in mol))  <br>"+
-        "P = Druck, n = Anzahl Teilchen (Stoffmenge in mol) "
-      },
-      {
-        parentId: 14,
-        id: 36,
-        titel: "Druck vs. Volumen",
-        inhalt: "Wird ein Ballon nur teilweise mit Luft gefüllt, so stellt man fest, dass er eine schlaffe Membran hat, also wenig Druck beinhaltet. <br>"+
-        "Verringert man danach das Volumen der Membran, welche dem Gas zur Verfügung steht, beobachtet man, dass die Membran straffer wird und somit der Druck steigt. <br>"+
-        "Dasselbe geschieht, wenn man eine konstante Gasmenge bei gleichbleibender Temperatur mit einer Pumpe auf ein kleineres Volumen zusammendrückt: <br>Je kleiner das Gasvolumen, desto grösser der Druck. <br>"+
-        "<br>Daher: Der Druck ist umgekehrt proportional zum Volumen (P ~ 1/V) <br>"+
-        "P = Druck, V = Volumen <br>"+
-        "<br>Somit lassen sich diese Proportionalitätsbeziehungen kompakt zusammenfassen: <br>"+
-        "P = R &times; n &times; T / V <br>"+
-        "P = Druck, R: Proportionalitätskonstante, 8,314 J/mol &times; K <br>"+
-        "n = Anzahl Teilchen (Stoffmenge in mol), T = Temperatur, V = Volumen <br>"
-      },
-      {
-        parentId: 14,
-        id: 37,
-        titel: "Ideale Gasgleichung",
-        inhalt: "Die gerade aufgestellten Abhängigkeiten des Gasdrucks von Temperatur, Stoffmenge und Volumen lassen sich wie folgt zusammenfassen: <br>"+
-        "P &times; V = n &times; R &times; T <br>"+
-        "P = Druck, V = Volumen <br>"+
-        "R: Proportionalitätskonstante, 8,314 J/mol &times; K <br>"+
-        "n = Anzahl Teilchen (Stoffmenge in mol), T = Temperatur <br>"+
-        "<br>Für die Beschreibung von Zustandsänderungen lässt sich folgern: <br>"+
-        "P &times; V / n &times; T = R = konstant <br>"+
-        "P1 &times; V1 / n1 &times; T1 = P2 &times; V2 / n2 &times; T2 	bzw. falls n konstant: P1 &times; V1 / T1 = P2 &times; V2 / T2 <br>"+
-        "<br>Alternativ lässt sich die Gasgleichung auch wie folgt schreiben: <br>"+
-        "P &times; V = N &times; kB &times; T		kB = 1.38 &times; 10<sup>23</sup>J/K <br>"+
-        "P = Druck, V = Volumen <br>"+
-        "N = n &times; N<sub>A</sub> <br>"+
-        "<br>Wichtig: Temperaturen immer in Kelvin einsetzen! "
-      },
-      {
         parentId: 3,
         id: 38,
         titel: "Wärmeausdehnung",
