@@ -1,0 +1,23 @@
+
+.mat-input-invalid {
+    color: red;
+}
+
+.mat-input-valid {
+    color: green;
+}
+
+.conty {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+}
+
+
+
+form {
+    width: fit-content;
+    margin: 0;
+}
