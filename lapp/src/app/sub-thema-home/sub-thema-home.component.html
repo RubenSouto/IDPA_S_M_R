@@ -3,7 +3,7 @@
   <div class="aside-content">
     <!-- Eine Tabelle für die Daten von Theorien -->
     <table mat-table [dataSource]="theorien">
-    
+
       <!-- Spalte für die ID -->
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef> ID </th>
@@ -12,19 +12,19 @@
 
       <!-- Spalte für den Titel -->
       <ng-container matColumnDef="titel">
-        <th mat-header-cell *matHeaderCellDef> Titel </th>
+        <th mat-header-cell *matHeaderCellDef> Theorie </th>
         <td mat-cell *matCellDef="let element"> {{element.titel}} </td>
       </ng-container>
 
       <!-- Header-Zeile für die Tabelle -->
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      
+
       <!-- Eine Zeile für jede Theorie in den Daten -->
       <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="setTheorie(row.id)" class="dataRow"></tr>
     </table>
 
     <!-- Eine zweite Tabelle für die Daten von Aufgaben -->
-    <table mat-table [dataSource]="aufgaben">
+    <table *ngIf="aufgaben.length > 0" mat-table [dataSource]="aufgaben">
 
       <!-- Spalte für die ID -->
       <ng-container matColumnDef="id">
@@ -34,13 +34,13 @@
 
       <!-- Spalte für den Titel -->
       <ng-container matColumnDef="titel">
-        <th mat-header-cell *matHeaderCellDef> Titel </th>
+        <th mat-header-cell *matHeaderCellDef> Aufgaben </th>
         <td mat-cell *matCellDef="let element"> {{element.titel}} </td>
       </ng-container>
 
       <!-- Header-Zeile für die Tabelle -->
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      
+
       <!-- Eine Zeile für jede Aufgabe in den Daten -->
       <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="setAufgabe(row.id)" class="dataRow"></tr>
     </table>
@@ -52,7 +52,7 @@
     <button [routerLink]="['/thema', thema]">Zurück zur Subthemen Auswahl</button>
     <button *ngIf="checkNext()" [routerLink]="['/subthema', nextSubThema]">Nächstes SubThema</button>
   </div>
-  
+
 </div>
 
 <!-- Ein Inhaltsbereich mit einer ID und einem Typ -->
