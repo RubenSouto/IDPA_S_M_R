@@ -1,10 +1,15 @@
 <div class="container">
+  <!-- Header mit Buttons zur Navigation -->
   <header class="header">
     <button [disabled]="this.session == null" class="button" (click)="home()">Home</button>
     <button [disabled]="this.session == null" class="button" (click)="signOut()">Sign Out</button>
     <button [disabled]="this.session == null" class="acccount-button" (click)="account()">Account</button>
   </header>
+
+  <!-- Haupt-Inhalt, abhängig von der aktuellen Route -->
   <router-outlet></router-outlet>
+
+  <!-- Footer mit Markenzeichen o.ä. -->
   <footer class="footer">
     <p>trademark</p>
   </footer>

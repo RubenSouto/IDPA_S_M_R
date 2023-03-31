@@ -260,7 +260,7 @@ export class TheorieDataService {
         titel: "Innere Energie",
         inhalt: "Als innere Energie bezeichnet man die Energie, die im System steckt."+
         "Diese nimmt durch Wärmefluss zu oder ab. <br>"+
-        "U ist das Formzelzeichen, Einheit = Joule <br>"+
+        "U ist das Formelzeichen, Einheit = Joule <br>"+
         "<ul><li>Die innere Energie ist eine Zustandsgrösse. Sie beschreibt, wie viel Energie im Körper steckt<li>"+
         "<li>Nicht zur inneren Energie eines Körpers gehört: die kinetische Energie & die potentielle Energie</li>"+
         "<li>Die innere Energie lebst kann man nicht messen. Messbar ist nur die Änderung der inneren Energie</li></ul>"
