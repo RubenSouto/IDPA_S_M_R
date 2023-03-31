@@ -1,11 +1,13 @@
-<div>
+
+<div class="conty">
     <!-- Wenn der Inhaltstyp eine Aufgabe ist, wird der Inhalt der Aufgabe angezeigt -->
     <p *ngIf="inhaltType == 'aufgabe'" [innerHTML]="aufgabe?.inhalt"></p>
     <!-- Wenn der Inhaltstyp eine Theorie ist, wird der Inhalt der Theorie angezeigt -->
     <p *ngIf="inhaltType == 'theorie'" [innerHTML]="theorie?.inhalt"></p>
 </div>
+
 <!-- Wenn der Inhaltstyp eine Aufgabe ist, wird ein Formular mit einem Eingabefeld für die Antwort angezeigt -->
-<div *ngIf="inhaltType == 'aufgabe'">
+<div class="conty" *ngIf="inhaltType == 'aufgabe'">
     <form class="example-form" [formGroup]="formGroup">
         <mat-form-field>
           <mat-label>Resultat</mat-label>

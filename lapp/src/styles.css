@@ -28,7 +28,7 @@ router-outlet{
     align-content: center;
     justify-items: center;
     justify-content: center;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 5px rgba(63, 81, 181,0.2);
 }
 
 .main {
@@ -49,6 +49,7 @@ router-outlet{
         width: 100%;
         display: grid;
         grid-template-rows: 1fr auto;
+        box-shadow: 5px 0 5px rgba(63, 81, 181,0.2);
     }
 
     .aside-content{
@@ -58,7 +59,7 @@ router-outlet{
         overflow-x: hidden;
         overflow-y: scroll;
         direction: rtl;
-        border-right: 1px solid grey;
+        
     }
 
     .aside-content table {
@@ -93,7 +94,7 @@ router-outlet{
     justify-items: center;
     justify-content: center;
     
-    box-shadow: 0 -5px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 -5px 5px rgba(63, 81, 181,0.2);
 }
 
 .form{
@@ -122,10 +123,15 @@ button{
 
 button:hover{
     transition: 200ms;
-    transform: scale(1.1)
+    transform: scale(1.1);
+    color: rgba(63, 81, 181, 0.87);
 }
 
 .dataRow:hover{
     cursor: pointer;
     background-color: brown;
+}
+
+td:hover {
+    color: rgba(63, 81, 181, 0.87);
 }
