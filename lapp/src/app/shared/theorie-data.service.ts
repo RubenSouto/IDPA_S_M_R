@@ -148,14 +148,6 @@ export class TheorieDataService {
       },
       {
         parentId: 8,
-        id: 17,
-        titel: "Bedeutung von 'Wärme",
-        inhalt: "Wenn sich ein Gegenstand erwärmt bewegen sich die Teilchen schneller. Dadurch wird die Temperatur erhöht <br>"+
-        "Ein Gegenstand erwärmen ist also nichts anderes als diesem Energie zu zu führen.<br>"+
-        "Wärme ist also eine Form von Energie. Diese wird bei zwei Gegenstände übertragen bis sie beide die gleiche Temperatur haben."
-      },
-      {
-        parentId: 8,
         id: 18,
         titel: "Zusammenhang von Zugeführter Wärme und der Temperaturdifferenz",
         inhalt: "<ul><li>Q = zugeführte Wärme Energie</li>"+
@@ -169,7 +161,7 @@ export class TheorieDataService {
         id: 19,
         titel: "Wärmekapazität",
         inhalt: "Die Wärmekapazität 'c' beschreibt das Verhältnis zwischen der zugeführten Wärme und der dadurch erreichten Temperaturänderung<br>"+
-        "<ul><li>Q = zugeführte Wärme Energie</li>"+
+        "<br><ul><li>Q = zugeführte Wärme Energie</li>"+
         "<li>c = Wärmekapazität</li>"+
         "<li>&#8710;T = Temperaturdifferenz</li></ul><br>"+
         "c = Q/&#8710;T"
@@ -178,8 +170,8 @@ export class TheorieDataService {
         parentId: 8,
         id: 20,
         titel: "spezifische Wärmekapazität",
-        inhalt: "Die spezifische Wärmekapazität bezeichnet die auf die Masse bezogene Wärmekapazität und ist eine Stoffeigenschaft der Thermodynamik. Sie bemisst die Fähigkeit eines Stoffes, thermische Energie zu speichern."+
-        "<ul><li>Q = zugeführte Wärme Energie</li>"+
+        inhalt: "Die spezifische Wärmekapazität bezeichnet die auf die Masse bezogene Wärmekapazität und ist eine Stoffeigenschaft der Thermodynamik. Sie bemisst die Fähigkeit eines Stoffes, thermische Energie zu speichern.<br>"+
+        "<br><ul><li>Q = zugeführte Wärme Energie</li>"+
         "<li>c = spezifische Wärmekapazität</li>"+
         "<li>&#8710;T = Temperaturdifferenz</li>"+
         "<li>m = Masse in kg</li></ul><br>"+
@@ -190,15 +182,15 @@ export class TheorieDataService {
         parentId: 9,
         id: 21,
         titel: "Erkenntnisse beim experimentieren mit Wasser",
-        inhalt: "Um eine Menge Wasser zu erwärmen ist eine bestimmte Energiemenge nötig, die"+
-        "<ul><li>proportional zur Wassermenge ist (4 kg Wasser brauchen doppelt so viel Energie wie 2 kg, bei einer bestimmten Temperaturänderung)</li>"+
+        inhalt: "Um eine Menge Wasser zu erwärmen ist eine bestimmte Energiemenge nötig, die: <br> "+
+        "<br><ul><li>proportional zur Wassermenge ist (4 kg Wasser brauchen doppelt so viel Energie wie 2 kg, bei einer bestimmten Temperaturänderung)</li>"+
         "<li>proportional zur Temperaturänderung ist (Wasser um 10 Grad zu erwärmen braucht doppelt so viel Energie wie es um 5 Grad zu erwärmen)</li></ul>"
       },
       {
         parentId: 10, 
         id: 22,
         titel: "Heizwert",
-        inhalt: "Der Heizwert gibt an wie viel Energie durch die Verbrennung von 1kg/1m<sup>3<sup> von einem Stoff gewonnen wird."+
+        inhalt: "Der Heizwert gibt an wie viel Energie durch die Verbrennung von 1kg/1m<sup>3</sup> von einem Stoff gewonnen wird. "+
         "Der Heizwert wird in J/kg angegeben."
       },
       {
@@ -235,14 +227,129 @@ export class TheorieDataService {
         parentId: 11,
         id: 26,
         titel: "Formel für Schmelwärme / Erstarrungswärme",
-        inhalt: ""
+        inhalt: "<ul><li>Q<sub>f</sub> = Schmelwärme / Erstarrungswärme</li>"+
+        "<li>L<sub>f</sub> = spezifische Schmelzwärme</li>"+
+        "<li>m = Masse des Stoffs in kg</li></ul><br>"+
+        "Q<sub>f</sub> = L<sub>f</sub> &times; m"
       },
       {
         parentId: 11,
         id: 27,
         titel: "Formel für Verdampfungswärme / Kondensationswärme",
-        inhalt: ""
-      }
+        inhalt: "<ul><li>Q<sub>u</sub> = Verdampfungswärme / Kondensationswärme</li>"+
+        "<li>L<sub>u</sub> = spezifische Verdampfwärme</li>"+
+        "<li>m = Masse des Stoffs in kg</li></ul><br>"+
+        "Q<sub>f</sub> = L<sub>f</sub> &times; m"
+      },
+      {
+        parentId: 12,
+        id: 28,
+        titel: "Wärme",
+        inhalt: "In der Physik bezeichnet man Energie die zwischen zei Körpern aufgrund "+
+        "der Temperaturdifferenz ausgetauscht wird als <b>Wärme</b> <br>"+
+        "Q ist das Formzelzeichen, Einheit = Joule"+
+        "<ul><li>Wärme ist eine Prozessgrösse (Wie Arbeit)<li>"+
+        "<li>Ein Körper selbst hat keine Wärme. Mit der Wärme beschreibt man wie viel ein Körper Energie abgibt oder aufnimmt."+
+        "Wärme beschreibt also die Veränderung und nicht einen Zustand</li>"+
+        "<li>Die Energie wird aufgrund der Temperaturdifferenz übertrage."+
+        "Bei der Arbeit passiert dies weil ein Körper eine Kraft auf einen anderen ausübt.</li></ul>"
+      },
+      {
+        parentId: 12,
+        id: 29,
+        titel: "Innere Energie",
+        inhalt: "Als innere Energie bezeichnet man die Energie, die im System steckt."+
+        "Diese nimmt durch Wärmefluss zu oder ab. <br>"+
+        "U ist das Formzelzeichen, Einheit = Joule <br>"+
+        "<ul><li>Die innere Energie ist eine Zustandsgrösse. Sie beschreibt, wie viel Energie im Körper steckt<li>"+
+        "<li>Nicht zur inneren Energie eines Körpers gehört: die kinetische Energie & die potentielle Energie</li>"+
+        "<li>Die innere Energie lebst kann man nicht messen. Messbar ist nur die Änderung der inneren Energie</li></ul>"
+      },
+      {
+        parentId: 12,
+        id: 30,
+        titel: "erster Hauptsatz der Thermodynamik",
+        inhalt: "<ul><li>&#8710; U = Änderung der inneren Energie</li>"+
+        "<li>Q = Wärme</li>"+
+        "<li>W = Arbeit(Work)</li></ul><br>"+
+        "Die ist eigentlich 'nur' ein Spezialfall der Energieerhaltung für ein offenes System: <br>"+
+        "&#8710; Energie = &#8710; E<sub>kin</sub> + &#8710; E<sub>pot</sub> + &#8710; E<sub>spann</sub> + &#8710; U <br>"+
+        "&#8710; Energie = W + Q <br>"+
+        "Für ein geschlossenes System würde der 1 Hauptsatz lauten: <br>"+
+        "&#8710; Energie = 0 <br>"+
+        "&#8710; U = 0 <br>"
+      },
+      {
+        parentId: 12,
+        id: 31,
+        titel: "zweiter Hauptsatz der Thermodynamik",
+        inhalt: "Wärme (Q) fliesst immer vom Körper mit der höheren Temperatur zum Körper mit der tieferen Temperatur.<br>"+
+        "<ul><li>Im thermischen Gleichgewicht befinden sich zwei Körper dann, wenn ihre Temperatur gleich ist. An diesem Punkt wird keine Wärme mehr ausgetauscht.</li>"+
+        "<li>Nur wenn eine Temperaturdifferenz existiert fliesst Wärme.</li></ul>"
+      },
+      {
+        parentId: 12,
+        id: 32,
+        titel: "dritter Hauptsatz der Thermodynamik (Nernst-Theorem)",
+        inhalt: "Es ist unmöglich ein System bis zum absoluten Nullpunkt (0 Kelvin) abzukülen."
+      },
+      {
+        parentId: 13,
+        id: 33,
+        titel: "Energieerhaltung bei Mischungen",
+        inhalt: "Wenn mehrere Stoffe mit unterschiedlichen Temperaturen in Kontakt kommen, fliesst so lange Wärme, bis alle Stoffe eine gemeinsame Temperatur erreicht haben. <br>"  +
+        "Anhand des 1. Hauptsatzes der Thermodynamik, also der Energieerhaltung, lässt sich eine Wärmebilanzgleichung aufstellen, mit welcher man die Mischtemperatur berechnen kann.<br>"+
+        "<br>Wärmebilanzgleichung: <br>Q1 + Q2 + Q3 + … + Qn = 0 "+
+        "Q1, Q2, Q3, …, Qn := die von Systemteilen aufgenommenen bzw. abgegebenen Wärmen. "
+      },
+      {
+        parentId: 14,
+        id: 34,
+        titel: "Druck vs Temperatur",
+        inhalt: "Wenn wir wissen wollen, wie sich der Druck in Abhängigkeit der Temperatur ändert, müssen wir und das Gasthermometer vorstellen. Dieses beinhaltet ein Gas wie Helium oder Wasserstoff, welches bei konstant bleibendem Volumen langsam erwärmt wird. Die aus diesem Experiment resultierende Kurve zeigt dann bei konstantem Gasvolumen sowie konstanter Menge eine lineare Abhängigkeit des Gasdrucks von der absoluten Temperatur, also genauer gesagt entsteht eine Gerade. <br>"+
+        "<br>Der Druck ist also proportional zur absoluten Temperatur (P ~ T) <br>"+
+        "P = Druck, T = Temperatur "
+      },
+      {
+        parentId: 14,
+        id: 35,
+        titel: "Druck vs. Stoffmenge",
+        inhalt: "Zwischen Gasmenge (in mol) und dem Gasdruck herrscht eine ebenfalls simple Beziehung. Hält mn ein Gas mit konstantem Volumen und konstanter Temperatur, so stellt man experimentell fest, dass ein aufgepumpter Reifen mehr Luft (mehr Moleküle), somit auch grösseren Druck beinhaltet. <br>"+ 
+        "(P ~ n (in mol))  <br>"+
+        "P = Druck, n = Anzahl Teilchen (Stoffmenge in mol) "
+      },
+      {
+        parentId: 14,
+        id: 36,
+        titel: "Druck vs. Volumen",
+        inhalt: "Wird ein Ballon nur teilweise mit Luft gefüllt, so stellt man fest, dass er eine schlaffe Membran hat, also wenig Druck beinhaltet. <br>"+
+        "Verringert man danach das Volumen der Membran, welche dem Gas zur Verfügung steht, beobachtet man, dass die Membran straffer wird und somit der Druck steigt. <br>"+   
+        "Dasselbe geschieht, wenn man eine konstante Gasmenge bei gleichbleibender Temperatur mit einer Pumpe auf ein kleineres Volumen zusammendrückt: <br>Je kleiner das Gasvolumen, desto grösser der Druck. <br>"+
+        "<br>Daher: Der Druck ist umgekehrt proportional zum Volumen (P ~ 1/V) <br>"+
+        "P = Druck, V = Volumen <br>"+
+        "<br>Somit lassen sich diese Proportionalitätsbeziehungen kompakt zusammenfassen: <br>"+
+        "P = R &times; n &times; T / V <br>"+
+        "P = Druck, R: Proportionalitätskonstante, 8,314 J/mol &times; K <br>"+
+        "n = Anzahl Teilchen (Stoffmenge in mol), T = Temperatur, V = Volumen <br>"
+      },
+      {
+        parentId: 14,
+        id: 37,
+        titel: "Ideale Gasgleichung",
+        inhalt: "Die gerade aufgestellten Abhängigkeiten des Gasdrucks von Temperatur, Stoffmenge und Volumen lassen sich wie folgt zusammenfassen: <br>"+
+        "P &times; V = n &times; R &times; T <br>"+
+        "P = Druck, V = Volumen <br>"+
+        "R: Proportionalitätskonstante, 8,314 J/mol &times; K <br>"+
+        "n = Anzahl Teilchen (Stoffmenge in mol), T = Temperatur <br>"+
+        "<br>Für die Beschreibung von Zustandsänderungen lässt sich folgern: <br>"+
+        "P &times; V / n &times; T = R = konstant <br>"+
+        "P1 &times; V1 / n1 &times; T1 = P2 &times; V2 / n2 &times; T2 	bzw. falls n konstant: P1 &times; V1 / T1 = P2 &times; V2 / T2 <br>"+
+        "<br>Alternativ lässt sich die Gasgleichung auch wie folgt schreiben: <br>"+
+        "P &times; V = N &times; kB &times; T		kB = 1.38 &times; 10<sup>23</sup>J/K <br>"+
+        "P = Druck, V = Volumen <br>"+
+        "N = n &times; N<sub>A</sub> <br>"+
+        "<br>Wichtig: Temperaturen immer in Kelvin einsetzen! "
+      },
     ]
   }
 }

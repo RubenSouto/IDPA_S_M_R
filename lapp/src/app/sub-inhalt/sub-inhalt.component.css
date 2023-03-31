@@ -1,0 +1,7 @@
+.mat-input-invalid {
+    color: red;
+}
+
+.mat-input-valid {
+    color: green;
+}

@@ -21,4 +21,5 @@ export interface Aufgabe{
     id: number
     titel: string
     inhalt: string
+    loesung: string
 }
