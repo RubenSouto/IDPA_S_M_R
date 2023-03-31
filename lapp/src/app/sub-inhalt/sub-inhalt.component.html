@@ -7,9 +7,10 @@
 <!-- Wenn der Inhaltstyp eine Aufgabe ist, wird ein Formular mit einem Eingabefeld für die Antwort angezeigt -->
 <div *ngIf="inhaltType == 'aufgabe'">
     <form class="example-form" [formGroup]="formGroup">
-        <mat-form-field class="mat-input-valid">
+        <mat-form-field>
           <mat-label>Resultat</mat-label>
-          <input matInput placeholder="Antwort" type="text" formControlName="answer">
+          <input matInput type="text" formControlName="answer">
+          <mat-hint>Zahlen auf 2 Stellen runden und als Trennzeichen Punkt benutzen.</mat-hint>
         </mat-form-field>
     </form>
 </div>

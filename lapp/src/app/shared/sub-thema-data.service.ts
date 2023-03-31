@@ -9,7 +9,7 @@ export class SubThemaDataService {
   public subThemas: SubThema[]
   constructor() {
     this.subThemas = [
-      {     
+      {
         parentId:1,
         id:1,
         titel: "1.1 Temperaturbegriff"
@@ -27,7 +27,7 @@ export class SubThemaDataService {
       {
         parentId:1,
         id:4,
-        titel: "1.3.1 Längenausdehung"
+        titel: "1.3.1 Längenausdehnung"
       },
       {
         parentId:1,

@@ -1,10 +1,8 @@
-<div class="main">  <!-- Haupt-Container -->
-  <div class="aside"></div>  <!-- Container für die Sidebar -->
-  <div class="content">  <!-- Container für den Inhalt -->
-    <h1>Sign in</h1>  <!-- Überschrift "Sign in" -->
-    <p class="description">Sign in with your E-Mail and Password</p>  <!-- Beschreibungstext -->
-    <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" class="form-widget">  <!-- Formular mit Formular-Gruppe "signInForm" und der Submit-Methode "onSubmit()" -->
-        <label for="email">Email</label>  <!-- Label für das E-Mail-Feld -->
+<div class="main"> <!-- Haupt-Container -->
+  <div class="content"> <!-- Container für den Inhalt -->
+    <h1>Sign In!</h1> <!-- Überschrift "Sign in" -->
+    <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" class="form-widget"> <!-- Formular mit Formular-Gruppe "signInForm" und der Submit-Methode "onSubmit()" -->
+        <label for="email">Email</label> <!-- Label für das E-Mail-Feld -->
         <input
           id="email"
           formControlName="email" 
@@ -25,13 +23,13 @@
           class="button block"
           [disabled]="loading"
         >
-          {{ loading ? 'Loading' : 'SignIn' }}  <!-- Der Button-Text ist "Loading", wenn "loading" true ist, ansonsten "SignIn" -->
+          {{ loading ? 'Loading' : 'Sign In' }}  <!-- Der Button-Text ist "Loading", wenn "loading" true ist, ansonsten "SignIn" -->
         </button>
     </form>
 
     <div>
       <p>Don't have an account yet?</p>  <!-- Text "Don't have an account yet?" -->
-      <button routerLink="../signup">switch to SignUp!</button>  <!-- Button, der zur SignUp-Seite verlinkt -->
+      <button routerLink="../signup">switch to Sign Up</button>  <!-- Button, der zur SignUp-Seite verlinkt -->
     </div>
   </div>
 </div>
